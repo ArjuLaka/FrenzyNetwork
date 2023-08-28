@@ -26,17 +26,21 @@ function App() {
           <Route path=":forumId" />
           <Route path="new" />
         </Route>
-        <Route path="game">
+        <Route path="/game">
           <Route index element={<GamePage />} />
           <Route path=":gameId" />
           <Route path="new" />
         </Route>
-        <Route path="book">
+        <Route path="/book">
           <Route index element={<BookPage />} />
           <Route path=":bookId" />
           <Route path="new" />
         </Route>
         <Route path="*" element={<NotFound />} />
+        <Route path="/account">
+          <Route path="signin" />
+          <Route path="signup" />
+        </Route>
       </Routes>
     </Router>
   );
