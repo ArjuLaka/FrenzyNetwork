@@ -3,6 +3,8 @@ import ArticlePage from './page/ArticlePage';
 import ForumPage from './page/ForumPage';
 import GamePage from './page/GamePage';
 import BookPage from './page/BookPage';
+import SignUpPage from './page/SignUpPage';
+import SignInPage from './page/SignInPage';
 import NotFound from './page/NotFound';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faNewspaper, faUserTie, faHouse, faGamepad, faBook } from '@fortawesome/free-solid-svg-icons';
@@ -37,9 +39,9 @@ function App() {
           <Route path="new" />
         </Route>
         <Route path="*" element={<NotFound />} />
-        <Route path="/account">
-          <Route path="signin" />
-          <Route path="signup" />
+        <Route path="/user">
+          <Route path="signin" element={<SignInPage />} />
+          <Route path="signup" element={<SignUpPage />} />
         </Route>
       </Routes>
     </Router>

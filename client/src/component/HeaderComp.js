@@ -32,10 +32,10 @@ function HeaderComp() {
           <img src={logo} alt="FN Logo"/>
         </Link>
         <div className="account">
-          <Link to="/account/signin" onContextMenu={disableHold} className="sign-in">
+          <Link to="/user/signin" onContextMenu={disableHold} className="sign-in">
             sign-in
           </Link>
-          <Link to="/account/signup" onContextMenu={disableHold} className="sign-up">
+          <Link to="/user/signup" onContextMenu={disableHold} className="sign-up">
             sign-up
           </Link>
         </div>
