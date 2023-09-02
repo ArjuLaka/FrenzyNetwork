@@ -13,11 +13,16 @@ function SignInComp() {
       },
       body: JSON.stringify({
         email,
-        password
+        password,
       }),
     })
     const data = await response.json()
-    console.log(data)
+    if (data.user) {
+      alert('sign in successful')
+      window.location.href = '/'
+    } else {
+      alert('please check your username and password')
+    }
   }
   
   return (
