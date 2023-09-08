@@ -1,5 +1,6 @@
 import HomePage from './page/HomePage';
 import ArticlePage from './page/ArticlePage';
+import ArticleIndexPage from './page/ArticleIndexPage';
 import ForumPage from './page/ForumPage';
 import GamePage from './page/GamePage';
 import BookPage from './page/BookPage';
@@ -19,9 +20,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/article">
-          <Route index element={<ArticlePage />} />
-          <Route path=":articleId" />
+          <Route index element={<ArticleIndexPage />} />
           <Route path="new" />
+          <Route path="sdgs/:sdgsId" />
+          <Route path=":articleId" element={<ArticlePage />}/>
         </Route>
         <Route path="/forum">
           <Route index element={<ForumPage />} />
