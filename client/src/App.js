@@ -1,6 +1,7 @@
 import HomePage from './page/HomePage';
 import ArticlePage from './page/ArticlePage';
 import ArticleIndexPage from './page/ArticleIndexPage';
+import NewArticlePage from './page/NewArticlePage';
 import ForumPage from './page/ForumPage';
 import GamePage from './page/GamePage';
 import BookPage from './page/BookPage';
@@ -21,7 +22,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/article">
           <Route index element={<ArticleIndexPage />} />
-          <Route path="new" />
+          <Route path="new" element={<NewArticlePage />} />
           <Route path="sdgs/:sdgsId" />
           <Route path=":articleId" element={<ArticlePage />}/>
         </Route>
